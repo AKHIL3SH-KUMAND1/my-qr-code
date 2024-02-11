@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="language-selector">
+    <mat-radio-group
+      [(ngModel)]="selectedLanguage"
+      (change)="switchLanguage(selectedLanguage)"
+    >
+      <mat-radio-button
+        *ngFor="let lang of supportedLanguages"
+        [value]="lang"
+      >
+        {{ lang }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="product-details-container">
+    <div class="product-details-item">
+      <h2>{{ currentMedicine?.productName }}</h2>
+      <div class="details-section">
+        <strong>Active Ingredient:</strong>
+        <p>{{ currentMedicine?.activeIngredient }}</p>
+      </div>
+      <div class="details-section">
+        <strong>Therapeutic Class:</strong>
+        <p>{{ currentMedicine?.therapeuticClass }}</p>
+      </div>
+      <div class="details-section">
+        <strong>Indication:</strong>
+        <p>{{ currentMedicine?.indication }}</p>
+      </div>
+      <div class="details-section">
+        <strong>Pharmaceutical Form:</strong>
+        <p>{{ currentMedicine?.pharmaceuticalForm }}</p>
+      </div>
+      <div class="details-section">
+        <strong>Composition:</strong>
+        <p>{{ currentMedicine?.composition }}</p>
+      </div>
+      <div class="details-section">
+        <strong>Administration:</strong>
+        <p>{{ currentMedicine?.administration }}</p>
+      </div>
+      <div class="details-section">
+        <strong>Contraindication:</strong>
+        <p>{{ currentMedicine?.contraindication }}</p>
+      </div>
+      <div class="details-section">
+        <strong>Adverse Drug Reaction:</strong>
+        <p>{{ currentMedicine?.adverseDrugReaction }}</p>
+      </div>
+      <div class="details-section">
+        <strong>Overdose:</strong>
+        <p>{{ currentMedicine?.overdose }}</p>
+      </div>
+      <div class="details-section">
+        <strong>Manufacturing Date:</strong>
+        <p>{{ currentMedicine?.manufacturingDate }}</p>
+      </div>
+      <div class="details-section">
+        <strong>Expiry Date:</strong>
+        <p>{{ currentMedicine?.expiryDate }}</p>
+      </div>
+      <div class="details-section">
+        <strong>Instructions:</strong>
+        <p>{{ currentMedicine?.instructions }}</p>
+      </div>
+    </div>
+  </div>
+
+ 
+  
+</div>
